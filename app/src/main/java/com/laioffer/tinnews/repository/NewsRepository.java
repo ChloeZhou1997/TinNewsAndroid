@@ -95,6 +95,7 @@ public class NewsRepository {
     }
 
     public void deleteSavedArticle(Article article) {
+//        TinNewsApplication.databaseWriteExecutor.execute(() -> database.articleDao().deleteArticle(article));
         AsyncTask.execute(() -> database.articleDao().deleteArticle(article));
     }
 
